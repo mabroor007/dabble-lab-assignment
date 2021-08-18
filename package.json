@@ -1,0 +1,16 @@
+{
+  "name": "dabble-lab-assignment",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "https://github.com/mabroor007/dabble-lab-assignment.git",
+  "author": "mabroor007 <amabroor007@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.1.2",
+    "graphql": "^15.5.1",
+    "mongoose": "^5.13.7"
+  }
+}
