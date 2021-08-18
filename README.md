@@ -14,11 +14,13 @@ database and perform queries and mutations using it.
 
 ## Get Started
 
-### clone the repo
+`clone the repo`
 
-### yarn install
+`yarn install`
 
-### yarn dev
+`replace mongo uri in index.js`
+
+`yarn dev`
 
 ## Possible queries and mutations
 
@@ -31,41 +33,6 @@ query {
     country
     totalPopulation
     year
-  }
-}
-```
-
-### Get one population
-
-```
-query {
-  getOnePopulation(country: "United Kingdom", year: "2019") {
-    __typename
-    ... on Error {
-      reason
-    }
-    ... on Population {
-      country
-      year
-      area
-      totalPopulation
-    }
-  }
-}
-```
-
-### Delete population
-
-```
-mutation {
-  deletePopulation(country: "United Kingdom", year: "2019") {
-    __typename
-    ... on Success {
-      message
-    }
-    ... on Error {
-      reason
-    }
   }
 }
 ```
@@ -84,6 +51,61 @@ mutation {
     year
     area
     totalPopulation
+  }
+}
+```
+
+### Read one population
+
+```
+query {
+  getOnePopulation(country: "United Kingdom", year: "2019") {
+    __typename
+    ... on Error {
+      reason
+    }
+    ... on Population {
+      country
+      year
+      area
+      totalPopulation
+    }
+  }
+}
+```
+
+### Update new population
+
+```
+mutation {
+  updatePopulation(
+    country: "United Kingdom"
+    year: "2019"
+    area: 242495
+    totalPopulation: 66000000
+  ) {
+    ... on Success {
+      message
+    }
+    ... on Error {
+      reason
+    }
+  }
+}
+```
+
+### Delete population
+
+```
+mutation {
+  deletePopulation(country: "United Kingdom", year: "2019") {
+    __typename
+    ... on Success {
+      message
+    }
+    ... on Error {
+      reason
+    }
   }
 }
 ```

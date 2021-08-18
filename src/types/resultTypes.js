@@ -15,11 +15,17 @@ const PopulationResult = {
     if (obj.reason) {
       return "Error";
     }
-    if (obj.totalPopulation) {
+    if (obj.year) {
       return "Population";
     }
     return null;
   },
 };
 
-module.exports = { DeletePopulationResult, PopulationResult };
+module.exports = {
+  // Since they both return Success or Error
+  // we dont need to create seprate typeResolvers
+  UpdatePopulationResult: DeletePopulationResult,
+  DeletePopulationResult,
+  PopulationResult,
+};
