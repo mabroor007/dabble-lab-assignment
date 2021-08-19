@@ -23,7 +23,7 @@ async function startApolloServer() {
 // first connect to db
 mongoose.connect(
   // replace it with your own uri
-  "mongodb+srv://test:test@cluster0.xsmpj.mongodb.net/populationdb?retryWrites=true&w=majority",
+  "************************",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (res) => {
     // if there is error return
