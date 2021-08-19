@@ -74,7 +74,7 @@ query {
 }
 ```
 
-### Update new population
+### Update population
 
 ```graphql
 mutation {
