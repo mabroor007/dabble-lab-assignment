@@ -1,10 +1,5 @@
 const api = require("./api");
 
-//const {
-//UpdatePopulationResult,
-//PopulationResult,
-//DeletePopulationResult,
-//} = require("./types/resultTypes");
 const typeResolvers = require("./types/resultTypes");
 
 module.exports = {
@@ -33,7 +28,6 @@ module.exports = {
     updatePopulation: async (_, params) => {
       const result = await api.updatePopulation(params);
 
-      console.log(result);
       if (result === "population not found") {
         return {
           reason: "no entry for specified population was found in the data",
