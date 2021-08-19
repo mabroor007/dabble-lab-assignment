@@ -10,7 +10,7 @@ const server = new ApolloServer({ typeDefs, resolvers, trace: false });
 // first connect to db
 mongoose.connect(
   // replace it with your own uri
-  "**************************************",
+  "****************************",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (res) => {
     // if there is error return

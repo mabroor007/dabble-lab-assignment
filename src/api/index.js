@@ -11,8 +11,8 @@ const API = {
     const population = new Population(data);
     return population.save();
   },
-  updatePopulation: ({ country, year, totalPopulation, area }) => {
-    const population = Population.findOne({ country, year });
+  updatePopulation: async ({ country, year, totalPopulation, area }) => {
+    const population = await Population.findOne({ country, year });
     if (!population) return "population not found";
 
     // updating
