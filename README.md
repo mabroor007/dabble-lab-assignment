@@ -26,7 +26,7 @@ database and perform queries and mutations using it.
 
 ### Get all populations
 
-```
+```graphql
 query {
   populations {
     area
@@ -39,7 +39,7 @@ query {
 
 ### Add new population
 
-```
+```graphql
 mutation {
   addNewPopulation(
     country: "United Kingdom"
@@ -57,7 +57,7 @@ mutation {
 
 ### Read one population
 
-```
+```graphql
 query {
   getOnePopulation(country: "United Kingdom", year: "2019") {
     __typename
@@ -76,7 +76,7 @@ query {
 
 ### Update new population
 
-```
+```graphql
 mutation {
   updatePopulation(
     country: "United Kingdom"
@@ -96,7 +96,7 @@ mutation {
 
 ### Delete population
 
-```
+```graphql
 mutation {
   deletePopulation(country: "United Kingdom", year: "2019") {
     __typename
